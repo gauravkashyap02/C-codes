@@ -3,14 +3,16 @@ int main(){
     int a;
     printf("Enter Your Array Size :");
     scanf("%d",&a);
+    int max = -99999;
     int arr[a];
-    printf("Enter your Elements :");
-    int sum=0;
+    printf("Enter Your Elements :");
     for(int i=0;i<a;i++){
         scanf("%d",&arr[i]);
-        sum =sum+arr[i];
+        if(max<arr[i]){
+            max=arr[i];
+        }
     }
-        printf("%d",sum);
-        
+        printf("max is %d ",max);
+
     return 0;
 }

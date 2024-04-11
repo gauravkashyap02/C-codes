@@ -3,14 +3,16 @@ int main(){
     int a;
     printf("Enter Your Array Size :");
     scanf("%d",&a);
+    int min = 99999;
     int arr[a];
-    printf("Enter your Elements :");
-    int sum=0;
+    printf("Enter Your Elements :");
     for(int i=0;i<a;i++){
         scanf("%d",&arr[i]);
-        sum =sum+arr[i];
+        if(min>arr[i]){
+            min=arr[i];
+        }
     }
-        printf("%d",sum);
-        
+        printf("min is %d ",min);
+
     return 0;
 }
